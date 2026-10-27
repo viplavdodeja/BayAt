@@ -1,0 +1,371 @@
+[
+  {
+    "id": "prep",
+    "title": "Preparation",
+    "kind": "checks",
+    "instructions": [
+      "Connect assembly to test fixtures.",
+      "Verify all tubing and fittings are connected and sealed.",
+      "Zero all sensors."
+    ],
+    "fields": [
+      {
+        "id": "fixture",
+        "label": "Fixtures Connected",
+        "type": "check"
+      },
+      {
+        "id": "sealed",
+        "label": "Tubing and Fittings Sealed",
+        "type": "check"
+      },
+      {
+        "id": "zero",
+        "label": "All Sensors Zeroed",
+        "type": "check"
+      }
+    ],
+    "sensors": [],
+    "unit": "psi",
+    "cleanup": "",
+    "vacuum": false
+  },
+  {
+    "id": "cda1",
+    "title": "Test 1 \u2014 CDA 1",
+    "kind": "decay",
+    "instructions": [
+      "Turn on CDA and V4.",
+      "Wait 1 minute for fill, then release CDA fitting.",
+      "Monitor QDF6, QDM14, QDF2 and QDF4.",
+      "Wait 1 minute for settling, then record initial readings.",
+      "Wait at least 1 minute, then record final readings."
+    ],
+    "fields": [
+      {
+        "id": "QDF6_initial",
+        "label": "QDF6 initial (psi)",
+        "type": "number"
+      },
+      {
+        "id": "QDM14_initial",
+        "label": "QDM14 initial (psi)",
+        "type": "number"
+      },
+      {
+        "id": "QDF2_initial",
+        "label": "QDF2 initial (psi)",
+        "type": "number"
+      },
+      {
+        "id": "QDF4_initial",
+        "label": "QDF4 initial (psi)",
+        "type": "number"
+      },
+      {
+        "id": "QDF6_final",
+        "label": "QDF6 final (psi)",
+        "type": "number"
+      },
+      {
+        "id": "QDM14_final",
+        "label": "QDM14 final (psi)",
+        "type": "number"
+      },
+      {
+        "id": "QDF2_final",
+        "label": "QDF2 final (psi)",
+        "type": "number"
+      },
+      {
+        "id": "QDF4_final",
+        "label": "QDF4 final (psi)",
+        "type": "number"
+      }
+    ],
+    "sensors": [
+      "QDF6",
+      "QDM14",
+      "QDF2",
+      "QDF4"
+    ],
+    "unit": "psi",
+    "cleanup": "Release air and flip V21 to clear air in the system.",
+    "vacuum": false
+  },
+  {
+    "id": "cda2",
+    "title": "Test 2 \u2014 CDA 2",
+    "kind": "checks",
+    "instructions": [
+      "Turn on CDA and V4.",
+      "Toggle V26 and monitor QDM14.",
+      "Confirm QDM14 goes to zero with V26 on."
+    ],
+    "fields": [
+      {
+        "id": "QDM14_zero",
+        "label": "QDM14 reaches zero with V26 on",
+        "type": "check"
+      }
+    ],
+    "sensors": [],
+    "unit": "psi",
+    "cleanup": "Release air and flip V21 to clear air in the system.",
+    "vacuum": false
+  },
+  {
+    "id": "cda3",
+    "title": "Test 3 \u2014 CDA 3",
+    "kind": "decay",
+    "instructions": [
+      "Turn on CDA, V4 and V21.",
+      "Wait 1 minute for fill, then release CDA fitting.",
+      "Monitor QDF18 and QDM7.",
+      "Wait 1 minute for settling, then record initial readings.",
+      "Wait at least 1 minute, then record final readings."
+    ],
+    "fields": [
+      {
+        "id": "QDF18_initial",
+        "label": "QDF18 initial (psi)",
+        "type": "number"
+      },
+      {
+        "id": "QDM7_initial",
+        "label": "QDM7 initial (psi)",
+        "type": "number"
+      },
+      {
+        "id": "QDF18_final",
+        "label": "QDF18 final (psi)",
+        "type": "number"
+      },
+      {
+        "id": "QDM7_final",
+        "label": "QDM7 final (psi)",
+        "type": "number"
+      }
+    ],
+    "sensors": [
+      "QDF18",
+      "QDM7"
+    ],
+    "unit": "psi",
+    "cleanup": "Release air and flip V21 to clear air in the system.",
+    "vacuum": false
+  },
+  {
+    "id": "calibration",
+    "title": "ER1 \u2014 Pre-calibration",
+    "kind": "calibration",
+    "instructions": [
+      "Turn on CDA, V4 and ER1.",
+      "Wait for readings to settle. Record the original R5 value from CV5 before calibration.",
+      "Calibrate if necessary. Suggested target: 3.0 psi; acceptable test range: 2.5\u20133.75 psi.",
+      "Clear air and reset by turning on CDA, V4 and ER1.",
+      "The next screen records readings after calibration during the decay test."
+    ],
+    "fields": [
+      {
+        "id": "R5_precalibration",
+        "label": "R5 before calibration (psi)",
+        "type": "number"
+      }
+    ],
+    "sensors": [],
+    "unit": "psi",
+    "cleanup": "",
+    "vacuum": false
+  },
+  {
+    "id": "er1",
+    "title": "Test 4 \u2014 ER1 decay",
+    "kind": "decay",
+    "instructions": [
+      "Verify the CV5 reading reflects calibration. Acceptable CV5 range: 2.5\u20133.75 psi.",
+      "Wait 1 minute for fill, then release CDA fitting.",
+      "Monitor CV5, QDM5 and QDF22.",
+      "Wait 1 minute for settling, then record initial readings.",
+      "Wait at least 1 minute, then record final readings."
+    ],
+    "fields": [
+      {
+        "id": "CV5_initial",
+        "label": "CV5 initial (psi)",
+        "type": "number"
+      },
+      {
+        "id": "QDM5_initial",
+        "label": "QDM5 initial (mmHg)",
+        "type": "number"
+      },
+      {
+        "id": "QDF22_initial",
+        "label": "QDF22 initial (mmHg)",
+        "type": "number"
+      },
+      {
+        "id": "CV5_final",
+        "label": "CV5 final (psi)",
+        "type": "number"
+      },
+      {
+        "id": "QDM5_final",
+        "label": "QDM5 final (mmHg)",
+        "type": "number"
+      },
+      {
+        "id": "QDF22_final",
+        "label": "QDF22 final (mmHg)",
+        "type": "number"
+      }
+    ],
+    "sensors": [
+      "CV5",
+      "QDM5",
+      "QDF22"
+    ],
+    "unit": "psi",
+    "cleanup": "Release air and flip V21 to clear air in the system.",
+    "vacuum": false
+  },
+  {
+    "id": "cv3",
+    "title": "Test 4.5 \u2014 CV3 / ER1",
+    "kind": "checks",
+    "instructions": [
+      "Switch CV5 sensor tubing to the 3-way valve.",
+      "Turn on CDA, V4 and ER1.",
+      "Record CV5 pressure: greater than 0 and less than 1.20 psi.",
+      "Check CV3 release for airflow.",
+      "Close and open the valve; verify CV5 returns to a stable state."
+    ],
+    "fields": [
+      {
+        "id": "CV5_pressure",
+        "label": "CV5 pressure (psi)",
+        "type": "number"
+      },
+      {
+        "id": "CV3_airflow",
+        "label": "CV3 airflow verified",
+        "type": "check"
+      },
+      {
+        "id": "CV5_stable",
+        "label": "CV5 returns to stable state",
+        "type": "check"
+      }
+    ],
+    "sensors": [],
+    "unit": "psi",
+    "cleanup": "Release air and flip V21 to clear air in the system.",
+    "vacuum": false
+  },
+  {
+    "id": "vac1",
+    "title": "Test 5 \u2014 Vac 1",
+    "kind": "decay",
+    "instructions": [
+      "Turn on Vac and V12. Power ER2 from the 24 V supply.",
+      "Wait 1 minute for fill, then turn Vac off.",
+      "Monitor QDF3.",
+      "Wait 1 minute for settling, then record initial reading.",
+      "Wait at least 1 minute, then record final reading. Use signed negative vacuum values."
+    ],
+    "fields": [
+      {
+        "id": "QDF3_initial",
+        "label": "QDF3 initial (mmHg)",
+        "type": "number"
+      },
+      {
+        "id": "QDF3_final",
+        "label": "QDF3 final (mmHg)",
+        "type": "number"
+      }
+    ],
+    "sensors": [
+      "QDF3"
+    ],
+    "unit": "mmHg",
+    "cleanup": "Flip V7 on and V12 off. Turn off ER2 power supply. Wait for pressure to equalize, then turn V7 off. Verify QDF3, QDM1 and QDF19 are zero.",
+    "vacuum": true
+  },
+  {
+    "id": "vac2",
+    "title": "Test 6 \u2014 Vac 2",
+    "kind": "voltage",
+    "instructions": [
+      "Turn on Vac, V12 and V7. Power ER2 from the 24 V supply.",
+      "Apply ER2 control voltages in order: 1, 3, 5, 8 and 10 V.",
+      "At each voltage, wait for QDM1 and QDF19 to equalize and record both readings.",
+      "Use signed negative vacuum values. Return to 0 V and confirm vacuum drops to zero."
+    ],
+    "fields": [
+      {
+        "id": "QDM1_1V",
+        "label": "QDM1 at 1 V (mmHg)",
+        "type": "number"
+      },
+      {
+        "id": "QDF19_1V",
+        "label": "QDF19 at 1 V (mmHg)",
+        "type": "number"
+      },
+      {
+        "id": "QDM1_3V",
+        "label": "QDM1 at 3 V (mmHg)",
+        "type": "number"
+      },
+      {
+        "id": "QDF19_3V",
+        "label": "QDF19 at 3 V (mmHg)",
+        "type": "number"
+      },
+      {
+        "id": "QDM1_5V",
+        "label": "QDM1 at 5 V (mmHg)",
+        "type": "number"
+      },
+      {
+        "id": "QDF19_5V",
+        "label": "QDF19 at 5 V (mmHg)",
+        "type": "number"
+      },
+      {
+        "id": "QDM1_8V",
+        "label": "QDM1 at 8 V (mmHg)",
+        "type": "number"
+      },
+      {
+        "id": "QDF19_8V",
+        "label": "QDF19 at 8 V (mmHg)",
+        "type": "number"
+      },
+      {
+        "id": "QDM1_10V",
+        "label": "QDM1 at 10 V (mmHg)",
+        "type": "number"
+      },
+      {
+        "id": "QDF19_10V",
+        "label": "QDF19 at 10 V (mmHg)",
+        "type": "number"
+      },
+      {
+        "id": "return_zero",
+        "label": "Vacuum returns to zero at 0 V",
+        "type": "check"
+      }
+    ],
+    "sensors": [
+      "QDM1",
+      "QDF19"
+    ],
+    "unit": "mmHg",
+    "cleanup": "Flip V7 on and V12 off. Turn off ER2 power supply. Wait for pressure to equalize, then turn V7 off. Verify QDF3, QDM1 and QDF19 are zero.",
+    "vacuum": false
+  }
+]

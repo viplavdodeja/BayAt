@@ -1,0 +1,2 @@
+# Tkinter must also be included in the Python installation.
+openpyxl==3.1.5
