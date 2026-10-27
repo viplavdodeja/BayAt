@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "job": "1389527",
+  "runs": [
+    {
+      "id": "3aca9991-ebe9-4e69-89d8-0267427b58a6",
+      "serial": "I5WNW-35",
+      "date": "2026-10-12",
+      "test_number": 1,
+      "started_at": "2026-10-12T15:24:59.153750+00:00",
+      "status": "Complete",
+      "decision": "Fail",
+      "step_index": 8,
+      "attempts": [
+        {
+          "step": "prep",
+          "title": "Preparation",
+          "recorded_at": "2026-10-12T15:26:10.749631+00:00",
+          "values": {
+            "fixture": true,
+            "sealed": true,
+            "zero": true
+          },
+          "failures": [],
+          "passed": true
+        },
+        {
+          "step": "cda1",
+          "title": "Test 1 \u2014 CDA 1",
+          "recorded_at": "2026-10-12T15:31:18.161477+00:00",
+          "values": {
+            "QDF6_initial": 86.7,
+            "QDM14_initial": 86.5,
+            "QDF2_initial": 26.1,
+            "QDF4_initial": 25.7,
+            "QDF6_final": 86.5,
+            "QDM14_final": 86.2,
+            "QDF2_final": 26.1,
+            "QDF4_final": 25.7,
+            "elapsed_seconds": 60.0,
+            "QDF6_difference": 0.20000000000000284,
+            "QDF6_decay": 0.20000000000000284,
+            "QDF6_pass": true,
+            "QDM14_difference": 0.29999999999999716,
+            "QDM14_decay": 0.29999999999999716,
+            "QDM14_pass": true,
+            "QDF2_difference": 0.0,
+            "QDF2_decay": 0.0,
+            "QDF2_pass": true,
+            "QDF4_difference": 0.0,
+            "QDF4_decay": 0.0,
+            "QDF4_pass": true
+          },
+          "failures": [],
+          "passed": true
+        },
+        {
+          "step": "cda2",
+          "title": "Test 2 \u2014 CDA 2",
+          "recorded_at": "2026-10-12T15:33:06.009001+00:00",
+          "values": {
+            "QDM14_zero": true
+          },
+          "failures": [],
+          "passed": true
+        },
+        {
+          "step": "cda3",
+          "title": "Test 3 \u2014 CDA 3",
+          "recorded_at": "2026-10-12T15:39:56.191094+00:00",
+          "values": {
+            "QDF18_initial": 87.2,
+            "QDM7_initial": 87.2,
+            "QDF18_final": 87.2,
+            "QDM7_final": 87.2,
+            "elapsed_seconds": 60.0,
+            "QDF18_difference": 0.0,
+            "QDF18_decay": 0.0,
+            "QDF18_pass": true,
+            "QDM7_difference": 0.0,
+            "QDM7_decay": 0.0,
+            "QDM7_pass": true
+          },
+          "failures": [],
+          "passed": true
+        },
+        {
+          "step": "calibration",
+          "title": "ER1 \u2014 Pre-calibration",
+          "recorded_at": "2026-10-12T15:41:15.872161+00:00",
+          "values": {
+            "R5_precalibration": 3.03
+          },
+          "failures": [],
+          "passed": true
+        },
+        {
+          "step": "er1",
+          "title": "Test 4 \u2014 ER1 decay",
+          "recorded_at": "2026-10-12T15:43:12.911201+00:00",
+          "values": {
+            "CV5_initial": 3.0,
+            "QDM5_initial": 22.2,
+            "QDF22_initial": 22.2,
+            "CV5_final": 2.99,
+            "QDM5_final": 22.2,
+            "QDF22_final": 22.2,
+            "elapsed_seconds": 60.0,
+            "CV5_difference": 0.009999999999999787,
+            "CV5_decay": 0.009999999999999787,
+            "CV5_pass": true,
+            "QDM5_difference": 0.0,
+            "QDM5_decay": 0.0,
+            "QDM5_pass": true,
+            "QDF22_difference": 0.0,
+            "QDF22_decay": 0.0,
+            "QDF22_pass": true
+          },
+          "failures": [],
+          "passed": true
+        },
+        {
+          "step": "cv3",
+          "title": "Test 4.5 \u2014 CV3 / ER1",
+          "recorded_at": "2026-10-12T15:44:22.695521+00:00",
+          "values": {
+            "CV5_pressure": 0.43,
+            "CV3_airflow": true,
+            "CV5_stable": true
+          },
+          "failures": [],
+          "passed": true
+        },
+        {
+          "step": "vac1",
+          "title": "Test 5 \u2014 Vac 1",
+          "recorded_at": "2026-10-12T15:50:34.756235+00:00",
+          "values": {
+            "QDF3_initial": -706.0,
+            "QDF3_final": -694.0,
+            "elapsed_seconds": 60.0,
+            "QDF3_difference": 12.0,
+            "QDF3_decay": 12.0,
+            "QDF3_pass": false
+          },
+          "failures": [
+            "QDF3 decay"
+          ],
+          "passed": false
+        },
+        {
+          "step": "vac1",
+          "title": "Test 5 \u2014 Vac 1",
+          "recorded_at": "2026-10-12T16:29:12.844845+00:00",
+          "values": {
+            "QDF3_initial": -706.0,
+            "QDF3_final": -701.0,
+            "elapsed_seconds": 60.0,
+            "QDF3_difference": 5.0,
+            "QDF3_decay": 5.0,
+            "QDF3_pass": false
+          },
+          "failures": [
+            "QDF3 decay"
+          ],
+          "passed": false
+        },
+        {
+          "step": "vac1",
+          "title": "Test 5 \u2014 Vac 1",
+          "recorded_at": "2026-10-12T16:53:50.564006+00:00",
+          "values": {
+            "QDF3_initial": -705.0,
+            "QDF3_final": -701.0,
+            "elapsed_seconds": 60.0,
+            "QDF3_difference": 4.0,
+            "QDF3_decay": 4.0,
+            "QDF3_pass": true
+          },
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "notes": [
+        "Previous failure at Test 5 \u2014 Vac 1: QDF3 decay",
+        "Previous failure at Test 5 \u2014 Vac 1: QDF3 decay",
+        "Unit yellow-tagged at Test 6 \u2014 Vac 2."
+      ],
+      "pending_failure": false,
+      "zero_confirmations": [
+        {
+          "after_step": "cda1",
+          "at": "2026-10-12T15:32:46.335510+00:00"
+        },
+        {
+          "after_step": "cda2",
+          "at": "2026-10-12T15:33:18.763179+00:00"
+        },
+        {
+          "after_step": "cda3",
+          "at": "2026-10-12T15:40:13.707325+00:00"
+        },
+        {
+          "after_step": "calibration",
+          "at": "2026-10-12T15:41:23.889351+00:00"
+        },
+        {
+          "after_step": "er1",
+          "at": "2026-10-12T15:44:05.645585+00:00"
+        },
+        {
+          "after_step": "cv3",
+          "at": "2026-10-12T15:44:24.282202+00:00"
+        },
+        {
+          "before_retry": "vac1",
+          "at": "2026-10-12T16:27:56.202710+00:00"
+        },
+        {
+          "before_retry": "vac1",
+          "at": "2026-10-12T16:52:35.201592+00:00"
+        },
+        {
+          "after_step": "vac1",
+          "at": "2026-10-12T17:04:56.698223+00:00"
+        }
+      ],
+      "awaiting_zero": false,
+      "retry_needs_zero": false,
+      "draft": {
+        "step": "vac2",
+        "values": {
+          "QDM1_1V": "",
+          "QDF19_1V": "",
+          "QDM1_3V": "",
+          "QDF19_3V": "",
+          "QDM1_5V": "",
+          "QDF19_5V": "",
+          "QDM1_8V": "",
+          "QDF19_8V": "",
+          "QDM1_10V": "",
+          "QDF19_10V": "",
+          "return_zero": false
+        }
+      },
+      "completed_at": "2026-10-12T18:32:40.392411+00:00"
+    }
+  ]
+}

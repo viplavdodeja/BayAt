@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "job": "1389415",
+  "runs": [
+    {
+      "id": "ac1752d0-5295-4609-8685-f4aae13da45b",
+      "serial": "H5700-7",
+      "date": "2026-10-12",
+      "test_number": 1,
+      "started_at": "2026-10-12T18:33:11.584952+00:00",
+      "status": "In progress",
+      "decision": "",
+      "step_index": 7,
+      "attempts": [
+        {
+          "step": "prep",
+          "title": "Preparation",
+          "recorded_at": "2026-10-12T18:59:53.183894+00:00",
+          "values": {
+            "fixture": true,
+            "sealed": true,
+            "zero": true
+          },
+          "failures": [],
+          "passed": true
+        },
+        {
+          "step": "cda1",
+          "title": "Test 1 \u2014 CDA 1",
+          "recorded_at": "2026-10-12T19:05:14.756597+00:00",
+          "values": {
+            "QDF6_initial": 87.1,
+            "QDM14_initial": 86.8,
+            "QDF2_initial": 27.2,
+            "QDF4_initial": 27.1,
+            "QDF6_final": 87.1,
+            "QDM14_final": 86.8,
+            "QDF2_final": 27.3,
+            "QDF4_final": 27.1,
+            "elapsed_seconds": 60.0,
+            "QDF6_difference": 0.0,
+            "QDF6_decay": 0.0,
+            "QDF6_pass": true,
+            "QDM14_difference": 0.0,
+            "QDM14_decay": 0.0,
+            "QDM14_pass": true,
+            "QDF2_difference": -0.10000000000000142,
+            "QDF2_decay": -0.10000000000000142,
+            "QDF2_pass": false,
+            "QDF4_difference": 0.0,
+            "QDF4_decay": 0.0,
+            "QDF4_pass": true
+          },
+          "failures": [
+            "QDF2 decay"
+          ],
+          "passed": false
+        },
+        {
+          "step": "cda1",
+          "title": "Test 1 \u2014 CDA 1",
+          "recorded_at": "2026-10-12T19:11:27.264056+00:00",
+          "values": {
+            "QDF6_initial": 87.4,
+            "QDM14_initial": 87.0,
+            "QDF2_initial": 27.2,
+            "QDF4_initial": 27.0,
+            "QDF6_final": 87.4,
+            "QDM14_final": 87.0,
+            "QDF2_final": 27.2,
+            "QDF4_final": 27.0,
+            "elapsed_seconds": 60.0,
+            "QDF6_difference": 0.0,
+            "QDF6_decay": 0.0,
+            "QDF6_pass": true,
+            "QDM14_difference": 0.0,
+            "QDM14_decay": 0.0,
+            "QDM14_pass": true,
+            "QDF2_difference": 0.0,
+            "QDF2_decay": 0.0,
+            "QDF2_pass": true,
+            "QDF4_difference": 0.0,
+            "QDF4_decay": 0.0,
+            "QDF4_pass": true
+          },
+          "failures": [],
+          "passed": true
+        },
+        {
+          "step": "cda2",
+          "title": "Test 2 \u2014 CDA 2",
+          "recorded_at": "2026-10-12T19:12:54.738679+00:00",
+          "values": {
+            "QDM14_zero": true
+          },
+          "failures": [],
+          "passed": true
+        },
+        {
+          "step": "cda3",
+          "title": "Test 3 \u2014 CDA 3",
+          "recorded_at": "2026-10-12T19:15:05.669565+00:00",
+          "values": {
+            "QDF18_initial": 86.9,
+            "QDM7_initial": 86.9,
+            "QDF18_final": 86.9,
+            "QDM7_final": 86.9,
+            "elapsed_seconds": 60.0,
+            "QDF18_difference": 0.0,
+            "QDF18_decay": 0.0,
+            "QDF18_pass": true,
+            "QDM7_difference": 0.0,
+            "QDM7_decay": 0.0,
+            "QDM7_pass": true
+          },
+          "failures": [],
+          "passed": true
+        },
+        {
+          "step": "calibration",
+          "title": "ER1 \u2014 Pre-calibration",
+          "recorded_at": "2026-10-12T19:21:42.450874+00:00",
+          "values": {
+            "R5_precalibration": 3.04
+          },
+          "failures": [],
+          "passed": true
+        },
+        {
+          "step": "er1",
+          "title": "Test 4 \u2014 ER1 decay",
+          "recorded_at": "2026-10-12T19:27:48.160179+00:00",
+          "values": {
+            "CV5_initial": 3.0,
+            "QDM5_initial": 22.3,
+            "QDF22_initial": 22.3,
+            "CV5_final": 2.99,
+            "QDM5_final": 22.3,
+            "QDF22_final": 22.3,
+            "elapsed_seconds": 60.0,
+            "CV5_difference": 0.009999999999999787,
+            "CV5_decay": 0.009999999999999787,
+            "CV5_pass": true,
+            "QDM5_difference": 0.0,
+            "QDM5_decay": 0.0,
+            "QDM5_pass": true,
+            "QDF22_difference": 0.0,
+            "QDF22_decay": 0.0,
+            "QDF22_pass": true
+          },
+          "failures": [],
+          "passed": true
+        },
+        {
+          "step": "cv3",
+          "title": "Test 4.5 \u2014 CV3 / ER1",
+          "recorded_at": "2026-10-12T19:28:00.053928+00:00",
+          "values": {
+            "CV5_pressure": 0.41,
+            "CV3_airflow": true,
+            "CV5_stable": true
+          },
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "notes": [
+        "Previous failure at Test 1 \u2014 CDA 1: QDF2 decay"
+      ],
+      "pending_failure": false,
+      "zero_confirmations": [
+        {
+          "before_retry": "cda1",
+          "at": "2026-10-12T19:05:38.575001+00:00"
+        },
+        {
+          "after_step": "cda1",
+          "at": "2026-10-12T19:11:31.341221+00:00"
+        },
+        {
+          "after_step": "cda2",
+          "at": "2026-10-12T19:12:56.695131+00:00"
+        },
+        {
+          "after_step": "cda3",
+          "at": "2026-10-12T19:15:07.583370+00:00"
+        },
+        {
+          "after_step": "calibration",
+          "at": "2026-10-12T19:21:45.321242+00:00"
+        },
+        {
+          "after_step": "er1",
+          "at": "2026-10-12T19:27:49.906938+00:00"
+        },
+        {
+          "after_step": "cv3",
+          "at": "2026-10-12T19:28:01.487025+00:00"
+        }
+      ],
+      "awaiting_zero": false,
+      "retry_needs_zero": false,
+      "draft": {
+        "step": "vac1",
+        "values": {
+          "QDF3_initial": "",
+          "QDF3_final": ""
+        }
+      }
+    }
+  ]
+}
